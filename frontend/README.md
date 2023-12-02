@@ -1,8 +1,7 @@
-# Web3-hackathon-webui
+# Cyber-music
 
 ## Start working
 
-- git clone https://github.com/Safwood/web3-hackathon-webui.git
-- cd web3-hackathon-webui
+- cd frontend
 - npm install
 - npm run start (starting development server) or npm run build (to build bundle)
