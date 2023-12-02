@@ -18,27 +18,27 @@ const HomePage: React.FC = () => {
                 <ul className="menu__list">
                   <li className="menu__item">
                     <Link to="/" className="menu__link">
-                      Главная
+                      <div className="menu__label">Главная</div>
                     </Link>
                   </li>
                   <li className="menu__item menu__item--active">
                     <Link to="services" className="menu__link">
-                      Услуги
+                      <div className="menu__label">Услуги</div>
                     </Link>
                   </li>
                   <li className="menu__item">
                     <Link to="reviews" className="menu__link">
-                      Плейлисты
+                      <div className="menu__label">Плейлисты</div>
                     </Link>
                   </li>
                   <li className="menu__item">
                     <Link to="reviews" className="menu__link">
-                      Профиль
+                      <div className="menu__label">Профиль</div>
                     </Link>
                   </li>
                   <li className="menu__item">
                     <Link to="reviews" className="menu__link">
-                      Отзывы
+                      <div className="menu__label">Отзывы</div>
                     </Link>
                   </li>
                 </ul>
@@ -52,10 +52,16 @@ const HomePage: React.FC = () => {
         </div>
       </header>
       <section className="home-page__hero-section">
-        <div className="container"></div>
+        <div className="container">
+          <div className="home-page__hero-content hero">
+            Здесь будет картинка и какая-то карточка:)
+          </div>
+        </div>
       </section>
-      <main className="home-page__content">
-        <div className="container">home-page</div>
+      <main className="home-page__main">
+        <div className="container">
+          <div className="home-page__main-section main-section">home-page</div>
+        </div>
       </main>
     </div>
   );
