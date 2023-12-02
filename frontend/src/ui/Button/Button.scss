@@ -1,0 +1,30 @@
+@import "assets/styles/variable.scss";
+
+.button {
+  border-radius: 30px;
+  padding: 6px 15px 6px;
+  background-color: $blueColor;
+  color: $whiteColor;
+  border: 2px solid $accentColor;
+  font-size: $largeFontSize;
+  font-family: $baseFontFamily;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: -1px 5px 1px -1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: darken($color: $blueColor, $amount: 10%);
+  }
+}
+
+.button.white-btn {
+  background-color: $whiteColor;
+  color: $accentColor;
+
+  &:active {
+    background-color: darken($color: #fff, $amount: 10%);
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "ui/Button";
 
 import "./HomePage.scss";
 
@@ -43,8 +44,8 @@ const HomePage: React.FC = () => {
                 </ul>
               </nav>
               <div className="home-page__login-buttons">
-                <button className="button white-btn">Войти</button>
-                <button className="button ">Зарегистрироваться</button>
+                <Button text={"Войти"} buttonStyle={"white"} />
+                <Button text={"Зарегистрироваться"} buttonStyle={"general"} />
               </div>
             </div>
           </div>
