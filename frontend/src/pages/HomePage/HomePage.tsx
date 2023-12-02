@@ -2,11 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "ui/Button";
 import { Card } from "components/Card";
+import piano from "assets/images/piano.png";
+import harp from "assets/images/harp.png";
+import violin from "assets/images/violin.png";
+import micro from "assets/images/micro.png";
+import micro2 from "assets/images/micro2.png";
 
 import "./HomePage.scss";
 
 const HomePage: React.FC = () => {
-  const cards = ["Первая", "Вторая", "Третья", "Четвертая", "Пятая"];
+  const cards = [
+    { title: "Пианино", image: piano },
+    { title: "Арфа", image: harp },
+    { title: "Скрипка", image: violin },
+    { title: "Поп", image: micro },
+    { title: "Live", image: micro2 }
+  ];
 
   return (
     <div className="home-page">
@@ -66,8 +77,8 @@ const HomePage: React.FC = () => {
               {cards.length
                 ? cards.map((card) => {
                     return (
-                      <li key={card} className="main-section__item">
-                        <Card heading={card} />
+                      <li key={card.title} className="main-section__item">
+                        <Card heading={card.title} image={card.image} />
                       </li>
                     );
                   })

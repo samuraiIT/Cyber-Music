@@ -1,8 +1,9 @@
 @import "assets/styles/variable.scss";
 
 .card {
-  width: 135px;
-  height: 165px;
+  position: relative;
+  width: 154px;
+  height: 205px;
   background: linear-gradient(
     180deg,
     $blueColor 0%,
@@ -18,11 +19,61 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  overflow: hidden;
   transition: 0.2s;
   justify-content: space-between;
+  color: $accentColor;
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  &::before {
+    content: "";
+    background-image: url("/assets/images/bitcoin1.png");
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-39%, -36%);
+    height: 45px;
+    width: 45px;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("/assets/images/bitcoin2.png");
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(39%, -36%);
+    height: 32px;
+    width: 32px;
+  }
+
+  &__image {
+    height: 75px;
+    width: 75px;
+  }
+
+  &__heading {
+    font-size: $largeFontSize;
+    margin-bottom: 7px;
+  }
+
+  &__subtitle {
+    font-size: $mediumFontSize;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-size: $smallFontSize;
+    margin-bottom: 12px;
   }
 }
