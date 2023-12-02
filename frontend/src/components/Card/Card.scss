@@ -1,0 +1,28 @@
+@import "assets/styles/variable.scss";
+
+.card {
+  width: 135px;
+  height: 165px;
+  background: linear-gradient(
+    180deg,
+    $blueColor 0%,
+    $whiteColor 54%,
+    $whiteColor 100%
+  );
+  border-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  transition: 0.2s;
+  justify-content: space-between;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

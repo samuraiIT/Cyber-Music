@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "ui/Button";
+import { Card } from "components/Card";
 
 import "./HomePage.scss";
 
 const HomePage: React.FC = () => {
+  const cards = ["Первая", "Вторая", "Третья", "Четвертая", "Пятая"];
+
   return (
     <div className="home-page">
       <header className="home-page__header">
@@ -53,14 +56,24 @@ const HomePage: React.FC = () => {
       </header>
       <section className="home-page__hero-section">
         <div className="container">
-          <div className="home-page__hero-content hero">
-            Здесь будет картинка и какая-то карточка:)
-          </div>
+          <div className="home-page__hero-content hero"></div>
         </div>
       </section>
       <main className="home-page__main">
         <div className="container">
-          <div className="home-page__main-section main-section">home-page</div>
+          <div className="home-page__main-section main-section">
+            <ul className="main-section__list">
+              {cards.length
+                ? cards.map((card) => {
+                    return (
+                      <li key={card} className="main-section__item">
+                        <Card heading={card} />
+                      </li>
+                    );
+                  })
+                : null}
+            </ul>
+          </div>
         </div>
       </main>
     </div>
