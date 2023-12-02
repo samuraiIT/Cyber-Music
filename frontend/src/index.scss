@@ -1,0 +1,144 @@
+@import "assets/styles/variable.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $textColor;
+  // этот метод убирает баг в анимации transform(scale) в firefox, но сам может потенциально вызывать баги, метод новый, при необходимости удалить.
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: $baseFontFamily;
+}
+/* HTML5 display-role reset for older browsers */
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  width: 100%;
+  font-style: normal;
+  color: $textColor;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $lightGreyColor;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+}
+
+.scrollbar--green {
+  scrollbar-color: $accentColor $lightGreyColor;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accentColor;
+  }
+}
+
+.scrollbar--grey {
+  scrollbar-color: $greyColor $lightGreyColor;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $greyColor;
+  }
+}
+
+.container {
+  width: 75%;
+  height: 100%;
+  margin: auto;
+}
+
+:export {
+  accentColor: $accentColor;
+  blueColor: $blueColor;
+  darkBlueColor: $darkBlueColor;
+  yellowColor: $yellowColor;
+  darkGreyColor: $darkGreyColor;
+  greyColor: $greyColor;
+  lightGreyColor: $lightGreyColor;
+  mediumGreyColor: $mediumGreyColor;
+
+  textColor: $textColor;
+  whiteTextColor: $whiteTextColor;
+}
+
+:root {
+  --accentColor: #{$accentColor};
+  --blueColor: #{$blueColor};
+  --darkBlueColor: #{$darkBlueColor};
+  --yellowColor: #{$yellowColor};
+  --darkGreyColor: #{$darkGreyColor};
+  --greyColor: #{$greyColor};
+  --lightGreyColor: #{$lightGreyColor};
+  --mediumGreyColor: #{$mediumGreyColor};
+  --textColor: #{$textColor};
+  --whiteTextColor: #{$whiteTextColor};
+}

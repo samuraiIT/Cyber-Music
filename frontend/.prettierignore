@@ -1,0 +1,9 @@
+.eslintrc.json
+tsconfig.json
+.prettierrc.json
+package-lock.json
+package.json
+public/index.html
+public/manifest.json
+.env.local
+.env
