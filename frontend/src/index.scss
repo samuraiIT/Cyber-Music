@@ -66,10 +66,24 @@ html {
 html,
 body,
 #root {
-  height: 100vh;
   width: 100%;
   font-style: normal;
   color: $textColor;
+
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $lightGreyColor;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
 }
 
 .App {

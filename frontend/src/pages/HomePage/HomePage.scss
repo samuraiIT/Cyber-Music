@@ -39,8 +39,12 @@
   }
 
   &__hero-section {
-    height: 500px;
+    height: 600px;
     width: 100%;
+    background-image: url("/assets/images/bg.png");
+    background-position: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &__main {
@@ -70,6 +74,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
     }
 
     &__item {
@@ -107,5 +112,19 @@
   .main-section {
     display: flex;
     height: 100%;
+
+    &__list {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin-right: 55px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
